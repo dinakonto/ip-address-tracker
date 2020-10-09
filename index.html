@@ -20,10 +20,10 @@
 </head>
 <body>
 
-  <div id="search-bar">
+  <form id="search-bar" method="post" onsubmit="search(); return false">
     <input id="input" type="text" placeholder="Search for any IP address or domain">
-    <button onclick="search()">Go</button>
-  </div>
+    <button type="submit">Go</button>
+  </form>
 
 
   <div class="results">
