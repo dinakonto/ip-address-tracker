@@ -56,7 +56,7 @@ button
 button:focus
   transform: scale(1.1)
 button:hover
-  opacity: 0.8
+  background: lighten(#000000, 20%)
   cursor: pointer
 input:focus,
 button:focus
@@ -85,6 +85,17 @@ button:focus
 .leaflet-control-container .leaflet-top.leaflet-left
   display: none
 
+@keyframes shake
+  0%
+    margin-left: 0rem
+  25%
+    margin-left: 0.5rem
+  75%
+    margin-left: -0.5rem
+  100%
+    margin-left: 0rem
+
+
 // HEADER + SEARCH BAR
 header
   background: url("../../images/pattern-bg.png") no-repeat
@@ -101,6 +112,11 @@ header
   color: $col-neutral-dark
   padding: 18px $pg-margin
   border-radius: 15px
+  &.error
+    animation: shake 0.2s ease-in-out 0s 2
+    border: 2px solid red
+    padding-top: 16px
+    padding-bottom: 16px
 #search-bar button
   position: absolute
   top: 0

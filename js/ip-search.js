@@ -18,12 +18,15 @@ const myIcon = L.icon({
 let myMap;
 
 
+
 /*
  * FUNCTIONS
  */
 
 // PERFORM AN IP LOOKUP
 function ipLookup(query) {
+  // Remove any error styling that may be present
+  $('#search-bar input').removeClass('error');
   // Create the endpoint url
   let searchEndpoint = endpoint + "?apiKey=" + apiKey;
   // If user has entered something into the search box...
@@ -43,6 +46,7 @@ function ipLookup(query) {
     url: searchEndpoint,
     dataType: "json",
     success: function(data) {
+      // console.log(data);
       popDisplay(data);
       popMap(data);
     }
@@ -88,6 +92,10 @@ function init() {
   ipLookup();
 }
 
+// ERROR HANDLING
+$(document).ajaxError(function(event, request, settings) {
+  $('#search-bar input').addClass('error');
+});
 
 
-init()
+init();
