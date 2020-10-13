@@ -48,22 +48,22 @@ h3
   text-transform: uppercase
   margin-top: 0
   margin-bottom: 9px
+button
+  border-radius: 15px
+  padding: 20px $pg-margin
+  border: none
+  background: black
+button:focus
+  transform: scale(1.1)
+button:hover
+  opacity: 0.8
+  cursor: pointer
 input:focus,
 button:focus
   outline: none
   -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.5)
   -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.5)
   box-shadow: 0px 0px 10px rgba(0,0,0,0.5)
-button:focus
-  transform: scale(1.1)
-button
-  border-radius: 15px
-  padding: 20px $pg-margin
-  border: none
-  background: black
-button:hover
-  opacity: 0.8
-  cursor: pointer
 .visually-hidden
   position: absolute
   left: -10000px
@@ -119,6 +119,7 @@ header
   border-radius: 15px
   padding: 28px 20px
   width: calc(100% - (2 * #{$pg-margin}))
+  box-shadow: 0px 20px 30px rgba(0,0,0,0.1)
 .results ul
   list-style-type: none
   padding-left: 0
