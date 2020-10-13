@@ -23,7 +23,7 @@ Users should be able to:
 ## My approach
 I started by focusing on handling the API call to [IPify](https://geo.ipify.org/) using jQuery's `.ajax()` method. It's my first time really working with an API, so I relied heavily of IPify's documentation and a useful article on how to [Make Your First API Calls with JQuery AJAX](https://hackersandslackers.com/making-ajax-calls-with-jquery/) from Hackers and Slackers.
 
-Once I got that working, I interpreted the responses into a functioning map using [LeafletJS](https://leafletjs.com/). I then went mobile-first on the styling with Sass.
+Once I got that working, I interpreted the responses into a functioning map using [LeafletJS](https://leafletjs.com/). I then went mobile-first on the styling with Sass, using the [PerfectPixel Chrome extension](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi) to help get the page as close to the designs as possible. 
 
 ## Questions
 Lots more reading to do on APIs but my biggest question at the moment is how you'd go about making the API call secure?
