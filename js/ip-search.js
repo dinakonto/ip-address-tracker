@@ -42,6 +42,7 @@ function popDisplay(results) {
 
 function popMap(results) {
   myMap.setView([results.location.lat, results.location.lng], 13);
+
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
@@ -50,6 +51,7 @@ function popMap(results) {
       zoomOffset: -1,
       accessToken: 'pk.eyJ1IjoiZGluYWtvbnRvIiwiYSI6ImNrYWx6cGE0MTE3c2gyenMwOWdqcDJ1ZTcifQ.X6sKiHSxq4uWUNvS03bNNg'
   }).addTo(myMap);
+
 }
 
 function init() {
