@@ -1,6 +1,5 @@
 // TODO
-// Handle errors in UI (eg no results/invalid search)
-// Pass API key securely
+// Pass API key securely??
 
 /*
  * GLOBAL VARIABLES
@@ -16,7 +15,6 @@ const myIcon = L.icon({
     iconAnchor: [23, 55],
 });
 let myMap;
-
 
 
 /*
@@ -53,7 +51,7 @@ function ipLookup(query) {
   });
 }
 
-// SEARCH FOR SOMETHING
+// SEARCH - TRIGGERED ON SUBMIT
 function search() {
   let query = $("#input").val();
   ipLookup(query);
@@ -97,5 +95,9 @@ $(document).ajaxError(function(event, request, settings) {
   $('#search-bar input').addClass('error');
 });
 
+
+/*
+ * RUN DAT
+ */
 
 init();
