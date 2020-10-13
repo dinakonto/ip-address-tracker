@@ -1,5 +1,4 @@
 // TODO
-// - Interaction styles
 // - Error handling (see js)
 
 // STYLEGUIDE
@@ -49,6 +48,22 @@ h3
   text-transform: uppercase
   margin-top: 0
   margin-bottom: 9px
+input:focus,
+button:focus
+  outline: none
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.5)
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.5)
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5)
+button:focus
+  transform: scale(1.1)
+button
+  border-radius: 15px
+  padding: 20px $pg-margin
+  border: none
+  background: black
+button:hover
+  opacity: 0.8
+  cursor: pointer
 .visually-hidden
   position: absolute
   left: -10000px
@@ -90,10 +105,8 @@ header
   position: absolute
   top: 0
   right: 0
-  border-radius: 0 15px 15px 0
-  padding: 20px $pg-margin
-  border: none
-  background: black
+  border-top-left-radius: 0
+  border-bottom-left-radius: 0
 
 // RESULTS
 .results
@@ -122,6 +135,9 @@ header
  * MEDIA QUERIES - Responsive layout changes
  */
 @media screen and (min-width: 800px)
+  h1
+    font-size: 1.3em
+    margin-top: 5px
   header
     padding-bottom: calc(#{$results-margin-top-sml} - 70px)
   #search-bar
@@ -171,3 +187,5 @@ header
     left: calc(50% - (1110px / 2) - 24px)
     top: $results-margin-top-lrg
     padding: 35px 31px
+  .results p
+    line-height: 1.3
