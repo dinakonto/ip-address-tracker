@@ -3,9 +3,14 @@
 // Pass API key securely
 
 
-let endpoint = "https://geo.ipify.org/api/v1";
-let apiKey = "at_CbhW0S7JWO63G0Wm52yIgwAaO1hL9";
+const endpoint = "https://geo.ipify.org/api/v1";
+const apiKey = "at_CbhW0S7JWO63G0Wm52yIgwAaO1hL9";
 let myMap;
+const myIcon = L.icon({
+    iconUrl: './images/icon-location.svg',
+    iconSize: [46, 55],
+    iconAnchor: [23, 55],
+});
 
 function search() {
   let query = $("#input").val();
@@ -51,6 +56,7 @@ function popMap(results) {
       zoomOffset: -1,
       accessToken: 'pk.eyJ1IjoiZGluYWtvbnRvIiwiYSI6ImNrYWx6cGE0MTE3c2gyenMwOWdqcDJ1ZTcifQ.X6sKiHSxq4uWUNvS03bNNg'
   }).addTo(myMap);
+  L.marker([results.location.lat, results.location.lng], {icon: myIcon}).addTo(myMap)
 
 }
 
